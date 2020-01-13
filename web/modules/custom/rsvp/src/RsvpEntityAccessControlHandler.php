@@ -19,7 +19,6 @@ class RsvpEntityAccessControlHandler extends EntityAccessControlHandler {
    */
   protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
     /** @var \Drupal\rsvp\Entity\RsvpEntityInterface $entity */
-    dump($operation);
 
     switch ($operation) {
 

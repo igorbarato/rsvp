@@ -3,13 +3,15 @@
 
     &-body {
         display: flex;
+        align-items: center;
 
         &-description {
-            border-left: 2px solid #eeeeee;
-            padding-left: 15px;
+            @include media-breakpoint-up(md) {
+                border-left: 2px solid #eeeeee;
+                padding-left: 15px;
+            }
 
             &-title {
-                font-family: Roboto;
                 font-size: 18px;
                 font-weight: 700;
                 letter-spacing: 0.07px;
@@ -17,16 +19,14 @@
 
             &-summary {
                 color: #777777;
-                font-family: Roboto;
                 font-size: 14px;
-                font-weight: 400;
+                font-weight: 400 !important;
                 letter-spacing: 0.06px;
                 line-height: 19px;
             }
 
             &-link {
                 color: #2cbc75;
-                font-family: Roboto;
                 font-size: 12px;
                 font-weight: 400;
                 letter-spacing: 0.05px;
