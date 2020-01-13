@@ -82,3 +82,22 @@ logs:
 # https://stackoverflow.com/a/6273809/1826109
 %:
 	@:
+
+.PHONY: install
+install:
+	@echo "Starting up containers for $(PROJECT_NAME)..."
+	docker-compose up -d --remove-orphans
+	@echo "Installing composer dependencies..."
+	composer install
+	# @echo "Copying local settings file..."
+	# sed -i '777,779 s/^#//g' web/sites/default/settings.php
+	# cp docker.settings.local.php web/sites/default/settings.local.php
+	@echo "Importing Database..."
+	docker-compose exec php sh -c 'drush -r $(DRUPAL_ROOT) sql-cli < /var/www/html/dumps/dump.sql'
+	@echo "Extract files..."
+	tar -zxvf dumps/files.tar.gz 
+	@echo "Importing Configs..."
+	docker-compose exec php sh -c 'drush -r $(DRUPAL_ROOT) cim -y'
+	@echo "Clean cache"
+	docker-compose exec php sh -c 'drush -r $(DRUPAL_ROOT) cr'
+	@echo "You can access the project using this URL: $(PROJECT_BASE_URL):$(PROJECT_PORT)"
