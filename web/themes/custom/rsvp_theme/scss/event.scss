@@ -1,0 +1,70 @@
+.event-date {
+    padding-right: 30px;
+    .day {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    
+    .month {
+        color: #777777;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    
+}
+
+.event-full {
+    header {
+        
+        // @include media-breakpoint-up(md) {
+        //     display: flex;
+        //     align-items: center;
+        // }
+    }
+    .node__title {
+        border-left: 2px solid #eeeeee;
+        padding-left: 30px;
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .event-location-text {
+        margin: 30px auto;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.12px;
+    }
+
+    .simple-gmap-static-map img {
+        max-width: 100%;
+    }
+}
+
+// List of Attenders
+.block-views-blockattendants-block-1 {
+    margin: 40px auto;
+    h2 {
+        font-size: 20px; 
+        font-weight: 700;
+    }
+
+    .view-content {
+        color: #2cbc75;
+        font-size: 18px;
+        line-height: 23px;
+
+        .views-row {
+            padding-right: 5px;
+            margin-right: 5px;
+
+            &:not(:last-child) {
+                border-right: 2px solid #2cbc75;
+            }
+        }
+     }
+}
+
+// Event Buttons Block
+.event-buttons {
+    margin: 40px auto;
+}

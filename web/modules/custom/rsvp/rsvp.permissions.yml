@@ -1,0 +1,20 @@
+add rsvp entities:
+  title: 'Create new RSVP entities'
+
+administer rsvp entities:
+  title: 'Administer RSVP entities'
+  description: 'Allow to access the administration form to configure RSVP entities.'
+  restrict access: true
+
+delete rsvp entities:
+  title: 'Delete RSVP entities'
+
+edit rsvp entities:
+  title: 'Edit RSVP entities'
+
+view published rsvp entities:
+  title: 'View published RSVP entities'
+
+view unpublished rsvp entities:
+  title: 'View unpublished RSVP entities'
+
