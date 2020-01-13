@@ -32,7 +32,7 @@ class RsvpController extends ControllerBase {
     public function homepage() {
         return [
             '#type' => 'markup',
-            '#markup' => 'Homepage'
+            '#markup' => ''
         ];
     }
 
