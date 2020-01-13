@@ -18,3 +18,5 @@ node_modules
 
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest
+.editorconfig
+.gitattributes
