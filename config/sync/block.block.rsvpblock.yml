@@ -1,0 +1,28 @@
+uuid: 8b6d10dd-feb9-4e8c-a656-b21f06e714fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - rsvp
+  theme:
+    - rsvp_theme
+id: rsvpblock
+theme: rsvp_theme
+region: content
+weight: 0
+provider: null
+plugin: rsvp_block
+settings:
+  id: rsvp_block
+  label: 'Rsvp block'
+  provider: rsvp
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

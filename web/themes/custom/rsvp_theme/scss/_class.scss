@@ -1,0 +1,10 @@
+.more-link {
+    margin: 40px auto;
+    @extend .text-center;
+
+    a {
+        @extend .btn;
+        @extend .btn-lg;
+        @extend .btn-primary;
+    }
+}

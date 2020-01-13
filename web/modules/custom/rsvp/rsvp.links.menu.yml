@@ -1,0 +1,14 @@
+
+# RSVP menu items definition
+entity.rsvp_entity.collection:
+  title: 'RSVP list'
+  route_name: entity.rsvp_entity.collection
+  description: 'List RSVP entities'
+  parent: system.admin_structure
+  weight: 100
+
+rsvp_entity.admin.structure.settings:
+  title: 'RSVP settings'
+  description: 'Configure RSVP entities'
+  route_name: rsvp_entity.settings
+  parent: system.admin_structure

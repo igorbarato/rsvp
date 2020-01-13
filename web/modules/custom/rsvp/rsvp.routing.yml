@@ -1,0 +1,13 @@
+rsvp.register_event_callback:
+  path: '/register-ajax/{nid}'
+  defaults:
+    _controller: '\Drupal\rsvp\Controller\RsvpController::register'
+  requirements:
+    _permission: 'add rsvp entities'
+rsvp.homepage:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\rsvp\Controller\RsvpController::homepage'
+    _title: 'Homepage'
+  requirements:
+    _permission: 'access content'

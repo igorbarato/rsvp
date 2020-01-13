@@ -1,0 +1,38 @@
+.card {
+    border-radius: 5px;
+
+    &-body {
+        display: flex;
+        align-items: center;
+
+        &-description {
+            @include media-breakpoint-up(md) {
+                border-left: 2px solid #eeeeee;
+                padding-left: 15px;
+            }
+
+            &-title {
+                font-size: 18px;
+                font-weight: 700;
+                letter-spacing: 0.07px;
+            }
+
+            &-summary {
+                color: #777777;
+                font-size: 14px;
+                font-weight: 400 !important;
+                letter-spacing: 0.06px;
+                line-height: 19px;
+            }
+
+            &-link {
+                color: #2cbc75;
+                font-size: 12px;
+                font-weight: 400;
+                letter-spacing: 0.05px;
+                line-height: 19px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

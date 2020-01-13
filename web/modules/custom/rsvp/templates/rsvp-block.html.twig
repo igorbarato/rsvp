@@ -1,0 +1,23 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+{% set classes = [
+    'clear-both',
+    'event-buttons',
+] %}
+<div{{ attributes.addClass(classes) }}>
+    {% if is_authenticated %}
+        <a id="button-register" class="use-ajax btn btn-primary" href="/register-ajax/{{nid}}">Join the event</a>
+    {% else %}
+        <a class="btn btn-primary" href="/user/register?destination={{ current_path }}#button-register">Create an account to Register</a>
+        <span> or </span>
+        <a class="btn btn-primary" href="/user/login?destination={{ current_path }}#button-register">Login to Register</a>
+    {% endif %}
+</div>

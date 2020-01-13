@@ -1,0 +1,5 @@
+entity.rsvp_entity.add_form:
+  route_name: entity.rsvp_entity.add_form
+  title: 'Add RSVP'
+  appears_on:
+    - entity.rsvp_entity.collection
