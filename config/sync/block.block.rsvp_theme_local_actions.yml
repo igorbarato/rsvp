@@ -1,0 +1,20 @@
+uuid: cdecb987-8745-4690-900b-cd6c187f0aba
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rsvp_theme
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: rsvp_theme_local_actions
+theme: rsvp_theme
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

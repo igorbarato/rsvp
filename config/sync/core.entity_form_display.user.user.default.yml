@@ -1,0 +1,33 @@
+uuid: ccaafe41-6308-46b6-904f-bffa4a4a2f45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_user_address
+    - field.field.user.user.user_picture
+  module:
+    - address
+    - user
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_address:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+hidden:
+  contact: true
+  language: true
+  timezone: true
+  user_picture: true

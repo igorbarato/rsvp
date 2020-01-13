@@ -1,0 +1,25 @@
+uuid: e87bed6e-e3c0-4219-9cba-5494cd5c64d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rsvp_theme
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: rsvp_theme_branding
+theme: rsvp_theme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }
