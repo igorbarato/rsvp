@@ -1,0 +1,33 @@
+uuid: 077fbb92-8ed1-4719-97f7-238a474416f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.attendants
+  module:
+    - node
+    - views
+  theme:
+    - rsvp_theme
+id: views_block__attendants_block_1
+theme: rsvp_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:attendants-block_1'
+settings:
+  id: 'views_block:attendants-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

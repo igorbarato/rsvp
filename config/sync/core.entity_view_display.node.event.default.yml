@@ -1,0 +1,71 @@
+uuid: dca953d3-63af-4c0e-96a7-26a51c17109c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.body
+    - field.field.node.event.field_address
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_image
+    - node.type.event
+  module:
+    - datetime
+    - image
+    - simple_gmap
+    - text
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_address:
+    type: simple_gmap
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      include_static_map: true
+      apikey: AIzaSyDLR-6LP-kDrFbWgZyQ2BDAk8sMzaBOJjI
+      iframe_width: '1172'
+      iframe_height: '305'
+      static_scale: 2
+      link_text: 'View larger map'
+      zoom_level: 14
+      map_type: m
+      langcode: en
+      include_map: false
+      include_link: false
+      include_text: false
+    third_party_settings: {  }
+  field_event_date:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: short
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_event_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
