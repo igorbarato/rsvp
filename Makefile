@@ -89,15 +89,20 @@ install:
 	docker-compose up -d --remove-orphans
 	@echo "Installing composer dependencies..."
 	composer install
-	# @echo "Copying local settings file..."
-	# sed -i '777,779 s/^#//g' web/sites/default/settings.php
-	# cp docker.settings.local.php web/sites/default/settings.local.php
+	@echo "Copying local settings file..."
+	cp web/sites/default/default.settings.php web/sites/default/settings.php
+	sed -i '755,757 s/^#//g' web/sites/default/settings.php
+	cp docker.settings.local.php web/sites/default/settings.local.php
 	@echo "Importing Database..."
-	docker-compose exec php sh -c 'drush -r $(DRUPAL_ROOT) sql-cli < /var/www/html/dumps/dump.sql'
+	docker-compose exec php sh -c 'drush -r $(DRUPAL_ROOT) sql-cli < /var/www/html/dumps/initial-dump.sql'
 	@echo "Extract files..."
 	tar -zxvf dumps/files.tar.gz 
 	@echo "Importing Configs..."
 	docker-compose exec php sh -c 'drush -r $(DRUPAL_ROOT) cim -y'
 	@echo "Clean cache"
 	docker-compose exec php sh -c 'drush -r $(DRUPAL_ROOT) cr'
+	@echo "Setting credentials to admin/admin..."
+	docker-compose exec php sh -c 'drush -r $(DRUPAL_ROOT) upwd admin admin'
 	@echo "You can access the project using this URL: $(PROJECT_BASE_URL):$(PROJECT_PORT)"
+
+	
