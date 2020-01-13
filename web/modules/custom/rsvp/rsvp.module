@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * module file.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function rsvp_theme() {
+  return [
+    'rsvp_block' => [
+      'variables' => [
+        'is_authenticated' => NULL,
+        'current_path' => NULL,
+        'content' => NULL,
+        'nid' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

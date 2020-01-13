@@ -1,0 +1,6 @@
+name: RSVP
+type: module
+description: 'Provides general customizations from RSVP site.'
+package: Custom
+core: 8.x
+
